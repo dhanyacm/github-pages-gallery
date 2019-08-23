@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, user-scalable=no" />
+      <title>Art Gallery - Home</title>
+      <link rel="stylesheet" href="public/lightgallery/css/lightgallery.css" />
+      <link rel="stylesheet" href="public/videojs/video-js.min.css" />
+      <link rel="stylesheet" href="public/lightgallery/css/lg-exif.min.css" />
+      <link rel="stylesheet" href="public/core.css" />
+      <link rel="stylesheet" href="public/theme.css" />
+  </head>
+
+  <body>
+
+    
+    <div id="container">
+    
+      <!--
+        Gallery title
+      -->
+      <header>
+        <h1><a href="index.html">Art Gallery</a></h1>
+      </header>
+    
+      <!--
+        Breadcrumbs of parent albums
+      -->
+      <nav class="breadcrumbs">
+    <a class="breadcrumb-item" href="index.html">Home</a>
+      </nav>
+    
+      <!--
+        Nested albums, if any
+      -->
+      <div id="albums">
+      </div>
+    
+      <!--
+        All photos and videos
+      -->
+      <ul id="media" class="clearfix">
+          
+            <li data-src="media/large/images.jpg"
+                data-sub-html=""
+                data-download-url="media/original/images.jpg"
+                
+                data-filename="images.jpg"
+          
+              >
+              <a href="media/original/images.jpg">
+                <img src="media/thumbs/images.jpg"
+                     width="120"
+                     height="120"
+                     alt="images.jpg" />
+              </a>
+            </li>      
+            <li data-src="media/large/lady with stars.jpg"
+                data-sub-html=""
+                data-download-url="media/original/lady with stars.jpg"
+                
+                data-filename="lady with stars.jpg"
+          
+              >
+              <a href="media/original/lady with stars.jpg">
+                <img src="media/thumbs/lady with stars.jpg"
+                     width="120"
+                     height="120"
+                     alt="lady with stars.jpg" />
+              </a>
+            </li>      
+            <li data-src="media/large/wooden.jpg"
+                data-sub-html=""
+                data-download-url="media/original/wooden.jpg"
+                
+                data-filename="wooden.jpg"
+          
+              >
+              <a href="media/original/wooden.jpg">
+                <img src="media/thumbs/wooden.jpg"
+                     width="120"
+                     height="120"
+                     alt="wooden.jpg" />
+              </a>
+            </li>  </ul>
+    
+      <!--
+        Optional footer
+      -->
+      <footer>
+        <p>All rights reserved</p>
+      </footer>
+    
+    </div>
+    <!-- Video loader -->
+    <div id="videos">
+    </div>
+
+    <!-- jQuery -->
+    <script src="public/jquery.min.js"></script>
+    <!-- VideoJS -->
+    <script src="public/videojs/video.min.js"></script>
+    <!-- LightGallery -->
+    <script src="public/lightgallery/js/lightgallery.js"></script>
+    <script src="public/lightgallery/js/lg-autoplay.js"></script>
+    <script src="public/lightgallery/js/lg-pager.js"></script>
+    <script src="public/lightgallery/js/lg-thumbnail.js"></script>
+    <script src="public/lightgallery/js/lg-video.js"></script>
+    <script src="public/lightgallery/js/lg-exif.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $("#media").lightGallery({
+          thumbWidth: 80,
+          controls: true,
+          loop : false,
+          download: true,
+          counter: true,
+          videojs: true
+        });
+      });
+    </script>
+
+
+  </body>
+
+</html>
